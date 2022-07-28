@@ -19,3 +19,11 @@ exports.handle = (req,res) => {
   }
 };
 
+// 経路関数をマップする getとpost
+exports.get = (url,action) => {
+  routes["GET"][url] = action;
+};
+
+exports.post = (url,action) => {
+  routes["POST"][url] = action;
+};
